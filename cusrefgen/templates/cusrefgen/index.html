@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <link href="{{ STATIC_URL }}bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="{{ STATIC_URL }}cusrefgen/css/cusrefgen.css" rel="stylesheet" media="screen">
+    </head>
+    <body>
+        <div class='container'>
+            <h1>Reference Number Generator</h1>
+            <br>
+            {% load static %}
+            {% load crispy_forms_tags %}
+            {% crispy form %}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,4 @@
+Django
+psycopg2
+setuptools
+django-crispy-forms
