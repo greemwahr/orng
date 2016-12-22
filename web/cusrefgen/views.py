@@ -1,6 +1,7 @@
 from django.shortcuts import render  # Default import from django framework
 from django.urls import reverse
 from django.http  import HttpResponseRedirect
+from django.views.decorators.cache import cache_control
 from .forms import RefGenForm
 from .models import *
 
@@ -8,7 +9,7 @@ def display(request):
   dispRefInstance = RefNo.objects.all().last()
   return render(request, 'cusrefgen/refno.html', {'dispRefInstance': dispRefInstance.generated_ref_no})
 
-
+@cache_control(no_cache=True, must_revalidate=True, no_store=True, max_age=0)
 def form(request):
   form = RefGenForm(request.POST or None)
   temp = RefGen.objects.all().last()
