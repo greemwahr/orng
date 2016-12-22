@@ -25,7 +25,7 @@ def form(request):
 
       month = str(referenceInstance.letter_date)
       year = str(referenceInstance.letter_date)
-      refnoInstance.generated_ref_no = 'ipNX/{}/{}/{}/{}'.format(temp.org_units, temp.ref_number, month[5:7], year[2:4])
+      refnoInstance.generated_ref_no = 'ipNX/{}/{}/{}/{}'.format(referenceInstance.org_units, referenceInstance.ref_number, month[5:7], year[2:4])
       refnoInstance.save()
 
       return HttpResponseRedirect(reverse('cusrefgen:display'))

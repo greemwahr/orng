@@ -25,7 +25,9 @@ SECRET_KEY = 'sar3*p9s208d&a80h29c#uunc8p#2g3z2$=v71s(nt*@bx17dj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+  '10.50.1.73',
+]
 
 
 # Application definition
@@ -125,6 +127,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/code/cusrefgen/static'
 
 # Settings for Cripsy forms package
 CRISPY_TEMPLATE_PACK = 'bootstrap3'

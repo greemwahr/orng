@@ -3,4 +3,3 @@ psycopg2
 gunicorn
 django-crispy-forms
 setuptools
-wheels

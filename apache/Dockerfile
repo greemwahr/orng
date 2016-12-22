@@ -1,3 +1,2 @@
 FROM bitnami/apache:latest
-ADD sites-enabled/vhost.conf /etc/apache2/sites-enabled/
-CMD ["/run.sh"]
+ADD sites-enabled/vhosts/vhost.conf /bitnami/apache/conf/vhosts
